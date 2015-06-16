@@ -1,4 +1,11 @@
 language: java
 jdk:
-  - oraclejdk8
-  - oraclejdk7
+- oraclejdk8
+- oraclejdk7
+deploy:
+  provider: heroku
+  api_key:
+    secure: HHyX+IoNgH/vl69rdQoLRp2oRMJd8BXdWeCWuBNutWwOoZ0MRhajH3BjsQz7+AAOZ1fS0lfFkU1b4VJeLK5jp6Fz7vRXOzhgufIBgiXraXnO5bfQkHJPx6yFVt8/C60hqp/SnKWgidGlarj4CPWcl8qkWHe9MdWj+lvHbk1CERCA/omDHcLWdmQfIo4v8KMswtJL/D3ABnMPgE9FWkMOoUPDUd9gSWMNNunGzenlysOYyEBVPriiNMtdLsdMuxzckwkpY0zSxj2M3qpQNNUVC7nFjFePqlNXrJfnrAyvSY+tm0X9Bl3/evBKGufTYsDGtODXVNK19xjUU2Zb2Mo5uDxwWfJ9t2KeLsfJ8FLkPFEtyDZ1yO/0MHS/vAP8CwZQgJm3MsRzPJRxwAxJjl2bfRodtavEVa8dbD2LHE2hcywoVBq/pJPQeO8WT+VsENA6Virl9oRX/7zwejnnxs0mXtMtp4MvaeClFIUW0PYtYNvyJQfvAwItDY2AP+plm5KcyRC7JwEEdI09NreXrJPC6GaeThIAkxW9dvverCkFQvmE0kqVwv1ojW0vdl1+Efq6SgJ5Y+LoVyXN0FsYzo28OeRQLs/lpFb+V1j+Ph10uhiTw7ocoOI0BeU9DR29CgfKKpjyJ7ypIqIWGuUGEezG+AQiJANfpiE3iugGbpGwxDc=
+  app: nesstest-test
+  on:
+    repo: nesstest/Test
