@@ -25,6 +25,31 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>appassembler-maven-plugin</artifactId>
+				<version>1.1.1</version>
+				<configuration>
+					<assembleDirectory>target</assembleDirectory>
+					<generateRepository>false</generateRepository>
+					<programs>
+						<program>
+							<mainClass>StartWebApp</mainClass>
+							<name>test</name>
+						</program>
+					</programs>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>assemble</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 	<dependencies>
@@ -40,4 +65,10 @@
 			<url>http://download.java.net/maven/glassfish</url>
 		</repository>
 	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>maven2.java.net</id>
+			<url>http://download.java.net/maven/glassfish</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
