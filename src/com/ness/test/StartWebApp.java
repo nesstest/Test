@@ -17,7 +17,7 @@ public class StartWebApp {
 		GlassFish glassfish = GlassFishRuntime.bootstrap().newGlassFish(gfProps);
 		glassfish.start();          
 		Deployer deployer = glassfish.getDeployer();            
-		File file = new File("YourSimpleMavenWebapplication.war");      
+		File file = new File("Test.war");      
 		deployer.deploy(file);
 	}
 }
