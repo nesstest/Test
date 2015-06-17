@@ -35,7 +35,7 @@
 					<generateRepository>false</generateRepository>
 					<programs>
 						<program>
-							<mainClass>StartWebApp</mainClass>
+							<mainClass>com/ness/test/StartWebApp</mainClass>
 							<name>test</name>
 						</program>
 					</programs>
