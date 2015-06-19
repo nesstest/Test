@@ -30,6 +30,15 @@
 					<failOnMissingWebXml>false</failOnMissingWebXml>
 				</configuration>
 			</plugin>
+			    <!-- To define the plugin version in your parent POM -->
+
+        <plugin>
+          <groupId>org.glassfish</groupId>
+          <artifactId>maven-embedded-glassfish-plugin</artifactId>
+          <version>3.1.1</version>
+        </plugin>
+
+
 
 <!-- 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
