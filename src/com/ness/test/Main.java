@@ -8,7 +8,7 @@ import org.glassfish.embeddable.GlassFishProperties;
 import org.glassfish.embeddable.GlassFishRuntime;
 import org.glassfish.embeddable.archive.ScatteredArchive;
 
-public class StartWebApp {
+public class Main {
 	
 	public static void main(String[] args) throws Exception {
 		String webappDirLocation = "WebContent/";
