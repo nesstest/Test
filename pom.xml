@@ -31,24 +31,65 @@
 				</configuration>
 			</plugin>
 
-			<!-- Test -->
-			<plugin>
-				<groupId>org.glassfish</groupId>
-				<artifactId>maven-embedded-glassfish-plugin</artifactId>
-				<version>4.1</version>
-				<configuration>
-					<goalPrefix>embedded-glassfish</goalPrefix>
-					<app>test.war</app>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>install</phase>
-						<goals>
-							<goal>run</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+
+<plugin>
+       <groupId>org.glassfish.embedded</groupId>
+         <artifactId>maven-embedded-glassfish-plugin</artifactId>
+         <version>4.1</version>
+         <dependencies>
+           <dependency>
+           <groupId>org.glassfish.main</groupId>
+           <artifactId>simple-glassfish-api</artifactId>
+           <version>4.1</version>
+         </dependency>
+         <dependency>
+           <groupId>org.glassfish.main.extras</groupId>
+           <artifactId>glassfish-embedded-all</artifactId>
+           <version>4.1</version>
+         </dependency>
+       </dependencies>
+     </plugin>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--             <plugin>
+                <groupId>org.glassfish.embedded</groupId>
+                <artifactId>maven-embedded-glassfish-plugin</artifactId>
+                <version>4.1</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.glassfish.main.common</groupId>
+                        <artifactId>simple-glassfish-api</artifactId>
+                        <version>4.1</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.glassfish.main.extras</groupId>
+                        <artifactId>glassfish-embedded-all</artifactId>
+                        <version>4.1</version>
+                    </dependency>
+                </dependencies>
+            </plugin> -->
+            
+            
+            
+            
+
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -74,12 +115,12 @@
 				</executions>
 			</plugin>
 
-
-
+			<!-- <plugin> <groupId>com.heroku.sdk</groupId> <artifactId>heroku-maven-plugin</artifactId> 
+				<version>0.4.3</version> <configuration> <appName>nesstest-test</appName> 
+				</configuration> </plugin> -->
 
 		</plugins>
 	</build>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.glassfish.main.extras</groupId>
@@ -87,36 +128,39 @@
 			<version>4.1</version>
 		</dependency>
 	</dependencies>
-
-	<pluginRepositories>
+	<repositories>
+		<repository>
+			<id>glassfish-releases</id>
+			<url>http://download.java.net/maven/glassfish</url>
+		</repository>
+	</repositories>
+<!-- 	<pluginRepositories>
 		<pluginRepository>
-			<id>maven2-repository.dev.java.net</id>
-			<name>Java.net Repository for Maven</name>
-			<url>http://download.java.net/maven/glassfish/</url>
+			<id>maven2.java.net</id>
+			<url>http://download.java.net/maven/glassfish</url>
 		</pluginRepository>
-	</pluginRepositories>
-
-
-
-	<!-- <plugin> <groupId>org.glassfish.embedded</groupId> <artifactId>maven-embedded-glassfish-plugin</artifactId> 
-		<version>4.1</version> <dependencies> <dependency> <groupId>org.glassfish.main.common</groupId> 
-		<artifactId>simple-glassfish-api</artifactId> <version>4.1</version> </dependency> 
-		<dependency> <groupId>org.glassfish.main.extras</groupId> <artifactId>glassfish-embedded-all</artifactId> 
-		<version>4.1</version> </dependency> </dependencies> </plugin> <plugin> <groupId>org.codehaus.mojo</groupId> 
-		<artifactId>appassembler-maven-plugin</artifactId> <version>1.1.1</version> 
-		<configuration> <assembleDirectory>target</assembleDirectory> <generateRepository>false</generateRepository> 
-		<programs> <program> <mainClass>Main</mainClass> <name>webapp</name> </program> 
-		</programs> </configuration> <executions> <execution> <phase>package</phase> 
-		<goals> <goal>assemble</goal> </goals> </execution> </executions> </plugin> 
-		<plugin> <groupId>com.heroku.sdk</groupId> <artifactId>heroku-maven-plugin</artifactId> 
-		<version>0.4.3</version> <configuration> <appName>nesstest-test</appName> 
-		</configuration> </plugin> </plugins> </build> <dependencies> <dependency> 
-		<groupId>org.glassfish.main.extras</groupId> <artifactId>glassfish-embedded-all</artifactId> 
-		<version>4.1</version> </dependency> </dependencies> <repositories> <repository> 
-		<id>glassfish-releases</id> <url>http://download.java.net/maven/glassfish</url> 
-		</repository> </repositories> <pluginRepositories> <pluginRepository> <id>maven2.java.net</id> 
-		<url>http://download.java.net/maven/glassfish</url> </pluginRepository> </pluginRepositories> -->
-
-
-
+	</pluginRepositories> -->
+	
+	
+	
+	
+	
+	
+	
+	
+	<pluginRepositories>
+        <pluginRepository>
+            <id>maven.java.net</id>
+            <name>Java.net Repository for Maven</name>
+            <url>https://maven.java.net/content/groups/promoted/</url>
+        </pluginRepository>
+        <pluginRepository>
+            <id>maven2-repository.dev.java.net</id>
+           <name>Java.net Repository for Maven</name>
+            <url>http://download.java.net/maven/glassfish/</url>
+        </pluginRepository>
+    </pluginRepositories>
+	
+	
+	
 </project>
