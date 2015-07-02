@@ -3,9 +3,9 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ness.test</groupId>
 	<artifactId>test</artifactId>
+	<packaging>jar</packaging>
 	<name>test</name>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 	<properties>
 		<java.version>1.7</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
