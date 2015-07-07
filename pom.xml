@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.ness.test</groupId>
 	<artifactId>test</artifactId>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>test</name>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
